@@ -4,7 +4,7 @@ ArrayList<Asteroid> asteroids = new ArrayList<Asteroid>();
 public void setup() 
 {
   background(0);
-  size(850,850);
+  size(550,550);
      for (int i = 0; i< stars.length; i++){
    stars[i] = new Stars(((int)(Math.random()*900)), ((int)(Math.random()*900)));
   }
