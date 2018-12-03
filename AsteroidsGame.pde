@@ -26,6 +26,7 @@ public void draw()
   }
   ship.show();
   ship.move();
+  distCheck();
   
 
 }
@@ -55,8 +56,22 @@ public void keyPressed()
       ship.setX((int)(Math.random()*800));
       ship.setY((int)(Math.random()*800));
       ship.setPointDirection((int)(Math.random()*360));
-   
+    }
      
     }
     
-}
+     public void distCheck(){
+     float shipX = ship.getX();
+     float shipY = ship.getY();
+    for (int i = 0; i< asteroids.size(); i++){ 
+      float asteroidX = asteroids.get(i).getX();
+      float asteroidY = asteroids.get(i).getY();
+     
+      if(dist(shipX, shipY, asteroidX, asteroidY) < 20){
+         asteroids.remove(i);
+      }    
+    }
+  }
+  
+  
+  
