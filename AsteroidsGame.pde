@@ -8,7 +8,7 @@ public void setup()
      for (int i = 0; i< stars.length; i++){
    stars[i] = new Stars(((int)(Math.random()*900)), ((int)(Math.random()*900)));
   }
-     for (int i = 0; i< 7; i++){
+     for (int i = 0; i< 15; i++){
      asteroids.add(new Asteroid());
   }
   
